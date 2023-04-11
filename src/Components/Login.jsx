@@ -6,7 +6,7 @@ import BeatLoader from "react-spinners/BeatLoader"
 import { bake_cookie ,read_cookie } from 'sfcookies'
 function Login() {
 
-    const {API_URL,islogin,setIsLoogin} = useAuth()
+    const {API_URL,islogin,setIsLoogin,value, setvalue} = useAuth()
     const [loading ,setLoading] = useState(false)
 
     const inputName =  useRef()
@@ -44,6 +44,7 @@ function Login() {
     setIsLoogin(true)
     const token = res.data.token
     bake_cookie("islogin",token)
+     bake_cookie("value",true)
     navigate("/addproducts")
     
 

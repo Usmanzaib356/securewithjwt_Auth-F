@@ -4,12 +4,14 @@ import useAuth from '../hooks/useAuth'
 import { useNavigate } from 'react-router-dom'
 function Logout() {
 
-    const  {islogin,setIsLoogin}= useAuth()
+    const  {islogin,setIsLoogin,value}= useAuth()
       const nav = useNavigate()
  
   useEffect(()=>{
     setIsLoogin(false)
     delete_cookie("islogin")
+    delete_cookie("value")
+    // delete_cookie("login")
      setTimeout(()=>{
         nav('/')
      },2000)
