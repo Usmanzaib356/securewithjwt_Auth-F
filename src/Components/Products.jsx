@@ -41,7 +41,7 @@
       <div className='cardss ms-5'>
       {pro.map((item)=>{
          return ( <div>
-        <div className="card" style={{"width": "18rem"}}>
+        <div className="cards" style={{"width": "18rem"}}>
     <div className="card-body">
       <h5 className="card-title">{item.name}</h5>
       <h5 className="card-price">{item.price}</h5>
@@ -52,7 +52,6 @@
     
         )
       })}
-
   </div>
       </>
 

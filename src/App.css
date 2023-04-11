@@ -13,3 +13,15 @@
     text-align: center
     
 }
+
+
+.cardss {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .cards {
+    width: 25%;
+    margin: 10px;
+  }

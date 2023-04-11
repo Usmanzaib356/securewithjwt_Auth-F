@@ -11,7 +11,6 @@ function Logout() {
     setIsLoogin(false)
     delete_cookie("islogin")
     delete_cookie("value")
-    // delete_cookie("login")
      setTimeout(()=>{
         nav('/')
      },2000)

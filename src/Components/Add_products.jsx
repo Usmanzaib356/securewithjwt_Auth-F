@@ -1,6 +1,10 @@
 import React, { useRef } from 'react'
 import axios from 'axios'
+import useAuth from "../hooks/useAuth"
 function Add_products() {
+
+
+  const {API_URL} = useAuth()
 
 
      const inputName  = useRef()
@@ -8,7 +12,32 @@ function Add_products() {
      const inputDes = useRef()
 
 
-   function add(){
+   function add(e){
+    
+   e.preventDefault()
+    console.log(inputName.current.value);
+    console.log(inputPrice.current.value ); 
+    console.log(inputDes.current.value);
+
+
+    const url = API_URL + "/products_save"
+    const json = {
+      name: inputName.current.value,
+      price:  parseInt( inputPrice.current.value),
+      description: inputDes.current.value
+    }
+    
+
+    axios.post(url,json).then((res)=>{
+
+     console.log(res);
+
+    }).catch((err)=>{
+       console.log(err);
+    })
+
+
+
 
    }
 
@@ -21,22 +50,22 @@ function Add_products() {
     <div className='addcards'>
       <label htmlFor="">Name</label>
       <br />
-         <input type="text" />
+         <input  ref={inputName} type="text" />
          <br />
          <br />
          <br />
          <label htmlFor="">Price</label>
           <br />
-         <input type="text" />
+         <input ref={inputPrice} type="text" />
          <br />
          <br />
          <br />
          <label htmlFor="">Description</label>
           <br />
-         <input type="text" />
+         <input ref={inputDes} type="text" />
          <br />
          <br />
-         <button>Add</button>
+         <button onClick={(e)=> add(e)}>Add</button>
     </div>
     </>
   )

@@ -44,8 +44,8 @@ function Login() {
     setIsLoogin(true)
     const token = res.data.token
     bake_cookie("islogin",token)
-     bake_cookie("value",true)
-    navigate("/addproducts")
+    bake_cookie("value",true)
+    navigate("/products")
     
 
    }).catch((err)=>{
