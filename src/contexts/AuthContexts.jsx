@@ -7,7 +7,7 @@ const AuthContextProvider = ({ children }) => {
 
     
   const [auth, setAuth] = useState("This is coming from Context JS");
-  const [islogin ,setIsLoogin] =useState(false)  
+  const [islogin ,setIsLoogin] = useState(false)  
   const [token, setToken] = useState("");   
 
 
