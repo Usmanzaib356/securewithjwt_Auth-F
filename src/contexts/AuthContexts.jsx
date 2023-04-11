@@ -8,13 +8,21 @@ const AuthContextProvider = ({ children }) => {
     
   const [auth, setAuth] = useState("This is coming from Context JS");
   const [islogin ,setIsLoogin] = useState(read_cookie("islogin"))  
-  const [token, setToken] = useState("");   
+  const [token, setToken] = useState(false);   
 
 
  const API_URL = `https://tame-blue-hedgehog-coat.cyclic.app/`
 
    
+useEffect(()=>{
 
+  const cookies = read_cookie("islogin")
+
+  if(cookies === true){
+      return setIsLoogin(true)
+  }
+
+})
 
 
 
