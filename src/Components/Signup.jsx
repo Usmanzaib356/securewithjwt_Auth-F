@@ -6,7 +6,7 @@ import BeatLoader from "react-spinners/BeatLoader"
 import { bake_cookie } from 'sfcookies'
 function Signup() {
 
-    const {API_URL,islogin,setIsLoogin} = useAuth()
+    const {API_URL,setIsLoogin} = useAuth()
     const [loading ,setLoading] = useState(false)
 
     const inputName =  useRef()

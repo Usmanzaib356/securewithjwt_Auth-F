@@ -19,7 +19,7 @@ useEffect(()=>{
   
   const cookies = read_cookie("value")
 
-  if(cookies == true){
+  if(cookies === true){
    return    setIsLoogin(true)
   }
 

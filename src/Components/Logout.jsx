@@ -12,7 +12,7 @@ function Logout() {
     delete_cookie("islogin")
     delete_cookie("value")
      setTimeout(()=>{
-        nav('/')
+        nav("/")
      },2000)
 
   },[])
