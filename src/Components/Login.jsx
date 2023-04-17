@@ -1,12 +1,12 @@
-import React, { useRef, useState,useEffect } from 'react'
+import React, { useRef, useState } from 'react'
 import axios from 'axios'
 import useAuth from "../hooks/useAuth"
 import { useNavigate } from 'react-router-dom'
 import BeatLoader from "react-spinners/BeatLoader"
-import { bake_cookie ,read_cookie } from 'sfcookies'
+import { bake_cookie  } from 'sfcookies'
 function Login() {
 
-    const {API_URL,islogin,setIsLoogin,value, setvalue} = useAuth()
+    const {API_URL,setIsLoogin} = useAuth()
     const [loading ,setLoading] = useState(false)
 
     const inputName =  useRef()

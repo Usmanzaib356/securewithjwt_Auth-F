@@ -4,7 +4,7 @@ import useAuth from '../hooks/useAuth'
 import { useNavigate } from 'react-router-dom'
 function Logout() {
 
-    const  {islogin,setIsLoogin,value}= useAuth()
+    const  { setIsLoogin }= useAuth()
       const nav = useNavigate()
  
   useEffect(()=>{

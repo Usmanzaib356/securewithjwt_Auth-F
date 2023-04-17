@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import axios from 'axios'
 import useAuth from "../hooks/useAuth"
-function Add_products() {
+function Addproducts() {
 
 
   const {API_URL} = useAuth()
@@ -71,4 +71,4 @@ function Add_products() {
   )
 }
 
-export default Add_products
+export default Addproducts
