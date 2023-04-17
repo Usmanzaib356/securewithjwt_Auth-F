@@ -15,7 +15,7 @@ function Logout() {
         nav("/")
      },2000)
 
-  },[])
+  },[nav,setIsLoogin])
 
 
   return (
